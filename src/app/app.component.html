@@ -1,20 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+<h1>
+  Welcome to {{ title }}!
+</h1>
+
+<nav style="display: block">
+  <a class="link-space" routerLink="/assignments">Count Characters</a>
+  <a class="link-space" routerLink="/difference">Let and this</a>
+  <a class="link-space" routerLink="/findKeys">Find Keys</a>
+  <a class="link-space" routerLink="/reverseString">Reverse string</a>
+  <a routerLink="/duplicateString">Remove Duplicate string</a>
+</nav>
+
+<ul type="square">
+  <li> Difference between ‘this’ and ‘let’ and when to use what, explain with examples. <a
+      routerLink="/difference">Go</a></li>
+  <li> Write a function which accepts an array of strings and returns a map of character to count of the
+    character(including spaces and special characters). <a routerLink="/assignments">Go</a></li>
+  <li>Write a function to return all the keys present in an object at any level.<a routerLink="/findKeys">Go</a></li>
+  <li>Write a function to reverse every word of a string.
+    · Using split and reverse
+    · Without using split and reverse and in O(1) space (since strings are immutable, assume that the input is a
+    character array).
+    <a routerLink="/reverseString">Go</a>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    Write a function to remove duplicate strings from an array of strings. <a routerLink="/duplicateString">Go</a>
   </li>
 </ul>
-
+<hr>
+<router-outlet></router-outlet>

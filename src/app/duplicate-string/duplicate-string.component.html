@@ -1,0 +1,9 @@
+
+<h3>Remove duplicates from comma separated string</h3>
+
+<div><span>Please insert comma separated string</span></div>
+<input type=“text” name="text"  [(ngModel)]="data" placeholder="Enter comma separated string value"/>
+<button (click)="RemoveDuplicateString()">Remove Duplicate String</button>
+<p *ngFor ="let item of resultArray">
+  {{item}}
+</p>

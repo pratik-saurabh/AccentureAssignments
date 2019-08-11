@@ -1,0 +1,79 @@
+<h1>
+  Difference between this and let keyword in typescript:
+</h1>
+<ul>
+  <li>
+    'this' keyword in JavaScript references an object, that object which is in the current context of execution. <br>
+    //Example:1 <br>
+    function display() <br>
+    {{'{'}} <br>
+    console.log(this.prop); <br>
+    {{'}'}} <br>
+    
+    var prop = "Pratik"; <br>
+    var myObj1 = {{'{'}} prop: "John", display: display {{'}'}};<br>
+    var myObj2 = {{'{'}}prop: "Smith", display:display {{'}'}}; <br>
+    //Calling function diplay()<br>
+    display(); //logs value as Pratik. <br>
+    myObj1.display(); //logs value as John. <br>
+    myObj2.display(); //logs value as Smith. <br>
+    <br>
+    <br>
+    The 'this' keyword in a class refers to the instance of the class.
+    .
+    <br>
+    //Example:2 <br>
+    <br>
+    export class DuplicateStringComponent{{'{'}}
+    <br>
+    data:string = "Assignment"; <br>
+    <br>
+    ExampleMethod() <br>
+    {{'{'}} <br>
+    var data = "Hello"; <br>
+    var finalData = this.data; <br>
+    console.log(finalData); //logs the value as Assignment. Hence this refers to the instance of the class<br>
+    console.log(data) //logs the value as Hello <br>
+    {{'}'}} <br>
+    {{'}'}} 
+    <br>
+  </li>
+  <li>
+    'let' keyword is block scoped,it is valid inside the block only. If we try to use outside of the block where it is
+    declared,it will give a
+    compiler error. Using let there is low possibility of having runtime error because maximum time it gives a compile
+    time error if we dont use it properly.
+    <br>
+    // Example:1
+    <br>
+    // example: let <br>
+    let myVar = 123; <br>
+    if (true) {{'{'}} <br>
+    let myVar = 456; <br>
+    console.log(myVar) //456<br>
+    {{'}'}} <br>
+    console.log(myVar); // 123 <br>
+
+    <br>
+    <br>
+    //Example: 2 <br>
+
+    export class DifferenceComponent implements OnInit {{'{'}} <br>
+      text:string; <br>
+        constructor() {{'{'}}  <br>
+        {{'}'}} <br>
+      
+        ngOnInit() {{'{'}} <br>
+        {{'}'}} <br>
+       myExample() <br>
+       {{'{'}} <br>
+         let data = "Name"; <br>
+         {{'}'}} <br>
+       myExampleMethod2() <br>
+       {{'{'}} <br>
+         this.text = data; //This gives the compile time error as data is used outside of the myExample() method block<br>  
+         {{'}'}} <br>
+         {{'}'}} <br>
+  </li>
+
+</ul>
