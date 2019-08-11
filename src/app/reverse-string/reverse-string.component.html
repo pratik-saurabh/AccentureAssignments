@@ -1,15 +1,15 @@
-<h3> Reversing a string</h3>
-<div><span>Please enter the string</span></div>
+<div class="title-style"> Reversing a string</div>
+<div class="input-container">Please enter the string</div>
 <input type=“text” name="text"  [(ngModel)]="data" placeholder="Enter string value"/>
-<button (click)="ReverseStringUsingSplit()">Reverse using split and reverse</button>
+<button (click)="ReverseStringUsingSplit()" class="button">Reverse using split and reverse</button>
 <p>
     {{text}}
   </p>
 <br>
 <br>
-<div><span>Please enter the string</span></div>
+<div class="input-container">Please enter the string</div>
 <input type=“text” name="text"  [(ngModel)]="charValue" placeholder="Enter character array value"/>
-<button (click)="reversingAString()">Reverse</button>
+<button (click)="reversingAString()" class="button">Reverse</button>
 <p>
   {{result}}
 </p>

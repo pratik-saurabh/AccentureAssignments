@@ -1,9 +1,12 @@
 
-<h3>Remove duplicates from comma separated string</h3>
+<div class="title-style">Remove duplicates from comma separated string</div>
 
-<div><span>Please insert comma separated string</span></div>
-<input type=“text” name="text"  [(ngModel)]="data" placeholder="Enter comma separated string value"/>
-<button (click)="RemoveDuplicateString()">Remove Duplicate String</button>
-<p *ngFor ="let item of resultArray">
-  {{item}}
-</p>
+<div class="input-container">Please insert comma separated string</div>
+<input type=“text” name="text" [(ngModel)]="data" placeholder="Enter comma separated string value"/>
+<button (click)="RemoveDuplicateString()" class="button">Remove Duplicate String</button>
+
+<ul>
+  <li *ngFor="let item of resultArray">
+    {{item}}
+  </li>
+</ul>

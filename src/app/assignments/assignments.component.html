@@ -1,8 +1,8 @@
 
-<h3>Count Characters</h3>
-<div><span>Please enter comma separated strings:</span></div>
+<div class="title-style">Count Characters</div>
+<div class="input-container">Please enter comma separated strings:  </div>
 <input type=“text” name="text"  [(ngModel)]="fullname" placeholder="Enter comma separated string"/>
-<button (click)="GetCountOfCharacters()">Calculate</button>
+<button (click)="GetCountOfCharacters()" class="button">Calculate</button>
 <ul >
   <li *ngFor = "let item of resultantCharCountMapArray">
     "{{item.CharVal}}":{{item.CountVal}}

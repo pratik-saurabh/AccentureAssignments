@@ -16,8 +16,12 @@ resultArray:string[]=[];
   RemoveDuplicateString()
   {
     var commaSeparatedArray = this.data.split(",");
-    var uniqueArray = commaSeparatedArray.filter(function(item, position) {
-      return commaSeparatedArray.indexOf(item.trim()) == position;
+    var finalArr = [];
+    commaSeparatedArray.forEach(x=> {
+      finalArr.push(x.trim());
+    });
+    var uniqueArray = finalArr.filter(function(item, position) {
+      return finalArr.indexOf(item) == position;
   })
   this.resultArray=uniqueArray;
   }

@@ -1,10 +1,10 @@
-<h3>
+<div class="title-style">
   Get keys in each level of an object
-</h3>
+</div>
 <textarea rows = "5" cols = "60" name = "description" [(ngModel)]="textValue" placeholder="Enter object in json format">
   
 </textarea><br>
-<button (click)="GetKeys()">Find Keys</button>
+<button (click)="GetKeys()" class="button">Find Keys</button>
 <ul>
   <li *ngFor="let item of keys">
     {{item}}
